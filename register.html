@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>daftar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(240, 240, 240);
+        }
+        .regist-container {
+            width: 300px;
+            padding: 16px;
+            background-color: rgb(6, 2, 245);
+            margin: 0 auto;
+            margin-top: 100px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type=text],input[type=password],input[type=email] {
+            width: 100%; 
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #aacccc;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+        button {
+            background-color: royalblue;
+            color: seashell;
+            padding: 12px 17px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        .container{
+            padding: 16px;
+        }
+        .login {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .login a {
+            color: rgb(217, 233, 224);
+            text-decoration: none;
+        }
+        .login a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <form action="index.html" method="post">
+         <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+            <label for="email"><b>email</b></label>
+            <input type="text" placeholder="Enter email" name="email" required>
+
+            <label for="psw"><b>password</b></label>
+            <input type="password" placeholder="enter password" name="psw" required>
+
+            <label for="psw-repeat"><b>repeat password</b></label>
+            <input type="password" placeholder="repeat password" name="psw-repeat" required>
+
+            <button type="submit">daftar</button>
+    </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+                event.preventDefault(); // mencegah form submit default
+                alert('anda berhasil login');
+                this.submit(); //melanjutkan submit form setelah alert
+            });
+    </script>
+
+<div class="container register">
+    <span>sudah punya akun?<a href="index.html">login</a></span>
+</div>
+</form>
+</div>
+
+</body>
+</html>
